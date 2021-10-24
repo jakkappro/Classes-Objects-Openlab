@@ -1,16 +1,18 @@
 package com.kubino.learning;
 
-import com.kubino.learning.Job.*;
-
-import java.util.Date;
+import com.kubino.learning.BattleOfWarriors.*;
 
 public class Main {
     public static void main(String[] args) {
-        Employee person = new Employee("Jozko", "Mrkvicka", new Date(1990, 7, 4),
-                new JobPosition("IT programmer", 2100));
+        var item1 = new Item("1", 5);
+        var item2 = new Item("2", 6);
+        var item3 = new Item("3", 4);
 
-        System.out.println(person.getFullName() + " " + person.getDateOfBirth().getDate() + "." +
-                person.getDateOfBirth().getMonth() + "." + person.getDateOfBirth().getYear() + " " +
-                person.getJobPosition().getName() + " " + person.getJobPosition().getSalary());
+        var w1 = new Warrior("ahoj", 5, 4, 4, item1, item2);
+        var w2 = new Warrior("hehe", 6, 5, 4, item3);
+
+        System.out.println(Warrior.Battle(w1, w2));
+        System.out.println(w1.toString());
+        System.out.println(w2.toString());
     }
 }
