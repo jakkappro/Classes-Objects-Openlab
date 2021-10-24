@@ -1,24 +1,18 @@
 package com.kubino.learning;
 
-import com.kubino.learning.Students.Student;
+import com.kubino.learning.BattleOfWarriors.*;
 
 public class Main {
     public static void main(String[] args) {
-        Student student = new Student();
-        Student student1 = new Student();
+        var item1 = new Item("1", 5);
+        var item2 = new Item("2", 6);
+        var item3 = new Item("3", 4);
 
-        student.setName("John");
-        student.setStudentNumber(12345);
-        student.setAddress("ahoj");
-        student.setPhoneNumber(123456789);
+        var w1 = new Warrior("ahoj", 5, 4, 4, item1, item2);
+        var w2 = new Warrior("hehe", 6, 5, 4, item3);
 
-        student.setName("Sam");
-        student.setStudentNumber(54321);
-        student.setAddress("joha");
-        student.setPhoneNumber(987654321);
-
-        System.out.println(student.getStudentNumber() + ", " + student.getPhoneNumber() + ", " + student.getAddress());
-
-        System.out.println(student1.getStudentNumber() + ", " + student1.getPhoneNumber() + ", " + student1.getAddress());
+        System.out.println(Warrior.Battle(w1, w2));
+        System.out.println(w1.toString());
+        System.out.println(w2.toString());
     }
 }
